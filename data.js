@@ -21,7 +21,7 @@ function updateCountdown() {
     
     // Exibe a mensagem especial no dia 6 de dezembro
     if (now.getMonth() === 11 && now.getDate() === 6) {
-        document.querySelector(".centralizado").innerHTML = `<span style="color: white; font-size: 2em; font-weight: bold;">Feliz mais um ano de namoro, vida!</span>`;
+        document.querySelector(".centralizado").innerHTML = `<span style="color: white; font-size: 30px; font-weight: bold;">Feliz mais um ano de namoro, vida!</span>`;
     } else {
         document.getElementById("days").innerText = days;
         document.getElementById("hours").innerText = hours;
