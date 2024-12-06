@@ -8,7 +8,8 @@ const images = [
     'mel5.png',
     'mel6.png',
     'mel7.png',
-    'mel8.png'
+    'mel8.png',
+    'mel9.png'
 ];
 
 const container = document.getElementById('background-images');
