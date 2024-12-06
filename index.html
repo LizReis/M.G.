@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Link do estilo-->
+        <link rel="stylesheet" href="style.css">
+
+        <!--Link da font principal-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+        <!--Link do Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+        <!--Link do Favicon-->
+        <link rel="shortcut icon" type="favicon.ico" href="">
+
+        <title>M.G.</title>
+    </head>
+
+    <body style="background-color: #ad5e2c;">
+        <main>
+            <section id="primeiroLayout">
+                <div id="primeiroLayout-L1">
+                    <div id="divFrase-Esquerda">
+                        <p id="divFrase-Esquerda-L1">"Você é o meu tudo,</p>
+                        <p style="margin-left: 20px;" id="divFrase-Esquerda-L2">eu te amo demais, saiba que</p>
+                        <p style="margin-left: 35px;" id="divFrase-Esquerda-L3">você é a melhor parte dos meus dias"</p>
+                    </div>
+                </div>
+
+                <div id="primeiroLayout-L2">
+                    <img  name="borboleta0" class="imagemBorboleta" src="borboletaEsquerda.png"/>
+                    <img name="hand1" src="maoEsquerda-M.png"/>
+                </div>
+
+                <div id="primeiroLayout-L2-IMG">
+                    <img name="borboleta" class="imagemBorboleta" src="borboletaEsquerda.png"/>
+                    <img name="hand" src="maoDireita-M.png"/>
+                </div>
+
+                <div id="primeiroLayout-L1-L2-MG">
+                    <h1>
+                        M. G.
+                    </h1>
+                </div>
+
+                <div id="primeiroLayout-L3">
+                    <button onclick="location.href='menu.html'">start</button>
+                </div>
+
+                <div id="primeiroLayout-L2-L3-FraseDireita">
+                    <div id="divFrase-Direita">
+                        <p id="divFrase-Direita-L1">"Você é o meu tudo,</p>
+                        <p style="margin-left: 20px;" id="divFrase-Direita-L2">eu te amo demais, saiba que</p>
+                        <p style="margin-left: 35px;" id="divFrase-Direita-L3">você é a melhor parte do meu dia"</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+        <script>
+            $("div[id='primeiroLayout-L1-L2-MG'] h1").on("mouseenter", function(){
+                $("div[id='divFrase-Esquerda'] p").css("visibility", "visible");
+                $("div[id='divFrase-Direita'] p").css("visibility", "visible");
+            });
+
+            $("div[id='primeiroLayout-L1-L2-MG'] h1").on("mouseleave", function(){
+                $("div[id='divFrase-Esquerda'] p").css("visibility", "hidden");
+                $("div[id='divFrase-Direita'] p").css("visibility", "hidden");
+            });
+
+            $("button").on("mouseenter", function(){
+                $("body").addClass("mudancaLenta-Preto");
+                $("body").removeClass("mudancaLenta-Marrom");
+                $("body").css("background-color", "#000000");
+
+                $("main").addClass("mudancaLenta-Marrom");
+                $("main").removeClass("mudancaLenta-Preto");
+                $("main").css("background-color", "#ad5e2c");
+
+                $("h1").css("color", "#000000");
+
+                $("div[id='primeiroLayout-L2'] img[src='maoEsquerda-M.png']").attr("src", "maoEsquerda-P.png");
+                $("div[id='primeiroLayout-L2-IMG'] img[src='maoDireita-M.png']").attr("src", "maoDireita-P.png");
+
+                $("button").css("background-color", "#ad5e2c");
+                $("button").css("border-color", "#000000");
+                $("button").css("color", "#000000");
+            });
+            $("button").on("mouseleave", function(){
+                $("body").removeClass("mudancaLenta-Preto");
+                $("body").addClass("mudancaLenta-Marrom");
+                $("body").css("background-color", "#ad5e2c");
+
+                $("main").removeClass("mudancaLenta-Marrom");
+                $("main").addClass("mudancaLenta-Preto");
+                $("main").css("background-color", "#000000");
+
+                $("h1").css("color", "#ad5e2c");
+
+                $("div[id='primeiroLayout-L2'] img[src='maoEsquerda-P.png']").attr("src", "maoEsquerda-M.png");
+                $("div[id='primeiroLayout-L2-IMG'] img[src='maoDireita-P.png']").attr("src", "maoDireita-M.png");
+
+                $("button").css("background-color", "#000000");
+                $("button").css("border-color", "#ad5e2c");
+                $("button").css("color", "#ad5e2c");
+            });
+        </script>
+    </body>
+</html>

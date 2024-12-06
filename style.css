@@ -1,0 +1,196 @@
+*{
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root{
+    --corPrincipal: #ad5e2c;
+    --pretoPrincipal: #000000;
+}
+
+.justify-left{
+    justify-content: left;
+}
+
+body{
+    background-color: var(--corPrincipal);
+    margin: 0px;
+}
+
+main{
+    background-color: var(--pretoPrincipal);
+    margin: 90px;
+    border-radius: 20px;
+}
+
+/*------------------------ PRIMEIRO LAYOUT -------------------- */
+#primeiroLayout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 220px 200px 150px;
+}
+
+#primeiroLayout-L1{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+#primeiroLayout-L2{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    padding-top: 75%;
+}
+#primeiroLayout-L2-IMG{
+    grid-column: 2/3;
+    grid-row: 1/3;
+    padding: 170px 0px 0px 838px;
+}
+#primeiroLayout-L1-L2-MG{
+    grid-column: 1/3;
+    grid-row: 1/3;
+
+    color: var(--corPrincipal);
+    text-align: center;
+    padding: 15% 0% 0% 0%;
+}
+#primeiroLayout-L1-L2-MG h1{
+    font-size: 190px;
+    position: relative
+}
+
+#primeiroLayout-L3{
+    grid-column: 1/3;
+    grid-row: 3/4;
+    padding: 20px 0px 0px 0px;
+    text-align: center;
+}
+
+#primeiroLayout p{
+    color: white;
+}
+
+#primeiroLayout-L2-IMG img[name="hand"]{
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -ms-transform: scaleY(-1);
+    transform: scaleY(-1);
+
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+#primeiroLayout-L2-IMG img[name="borboleta"]{
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+#primeiroLayout-L2-L3-FraseDireita{
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+
+#primeiroLayout-L3 button{
+    width: 150px;
+    height: 50px;
+
+    color: var(--corPrincipal);
+    background-color: var(--pretoPrincipal);
+    border: 2px solid var(--corPrincipal);
+    border-radius: 51px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.imagemBorboleta{
+    padding-left: 50%;
+}
+
+
+#divFrase-Esquerda{
+    grid-column: 1/3;
+    grid-row: 2/4;
+
+    display: grid;
+    grid-template-columns: 270px;
+    grid-template-rows: 20px 20px 20px;
+    padding: 90px 0px 0px 90px;
+
+}
+#divFrase-Esquerda-L1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#divFrase-Esquerda-L2{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+#divFrase-Esquerda-L3{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+#divFrase-Esquerda p{
+    margin: 0px;
+    padding: 0%;
+    font-size: 16px;
+
+    visibility: hidden;
+}
+
+
+#divFrase-Direita{
+    display: grid;
+    grid-template-columns: 250px;
+    grid-template-rows: 20px 20px 20px;
+
+    padding: 36% 0% 0% 72%;
+    margin: 0px;
+
+}
+#divFrase-Direita-L1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#divFrase-Direita-L2{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+#divFrase-Direita-L3{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+#divFrase-Direita p{
+    margin: 0px;
+    padding: 0%;
+    font-size: 16px;
+
+    visibility: hidden;
+}
+
+
+@keyframes mudancaLenta-Marrom{ /* Muda a cor das bordas das caixas da tela principal gradativamente */
+    0%{background-color: var(--pretoPrincipal);}
+    25%{background-color: var(--corPrincipal);}
+    25%{background-color: var(--corPrincipal);}
+    50%{background-color: var(--corPrincipal);}
+}
+.mudancaLenta-Marrom{
+    animation: mudancaLenta-Marrom 2s 0s linear 1;
+}
+
+@keyframes mudancaLenta-Preto{ /* Muda a cor das bordas das caixas da tela principal gradativamente */
+    0%{background-color: var(--corPrincipal);}
+    25%{background-color: var(--pretoPrincipal);}
+    25%{background-color: var(--pretoPrincipal);}
+    50%{background-color: var(--pretoPrincipal);}
+}
+.mudancaLenta-Preto{
+    animation: mudancaLenta-Preto 2s 0s linear 1;
+}
+

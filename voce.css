@@ -1,0 +1,116 @@
+*{
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+:root{
+    --corPrincipal: #ad5e2c;
+    --pretoPrincipal: #000000;
+}
+
+.justify-left{
+    justify-content: left;
+}
+
+body{
+    background-image: url('mel-background3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    z-index: 2; /* Certifique-se de que o texto esteja na camada superior */
+    background-color: transparent;
+}
+
+.container2{
+    position: fixed;
+    color: white;
+    top: 20%;
+    left: 18%;
+}
+
+.container3{
+    position: fixed;
+    color: white;
+    top: 20%;
+    right: 17%;
+}
+
+main{
+    height: 75vh;
+    text-align: center;
+    background-color: var(--pretoPrincipal);
+    margin: 90px;
+    margin-left: 160px;
+    border-radius: 20px
+}
+
+main h1{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 230px;
+    font-weight: 600;
+    letter-spacing: 30px;
+    text-align: center;
+    margin-top: 8%;
+    margin-left: 6%;
+    position: relative; /* Importante para manter a hierarquia sem afetar posicionamento do "coracao" */
+    z-index: 1; /* Certifique-se de que o texto fica acima da imagem "coracao" */
+}
+
+main img[name="mel"]{
+    position: relative; /* Permite mover a imagem sem afetar outros elementos */
+    top: 120px;  /* Move a imagem 20px para baixo */
+    border-radius: 10px;
+}
+
+main img[name="coracao"]{
+    position: absolute;
+    width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+    top: 40%; /* Alinha com a altura do texto VOCÊ */
+    left: 33%; /* Ajuste para alinhar com o "VOCÊ" */
+    transform: translate(-50%, -50%); /* Centraliza a posição */
+    z-index: 0; /* Envia a imagem abaixo do texto se necessário */
+}
+
+main img[name="emoji"]{
+    position: absolute;
+    width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+    top: 38%; /* Alinha com a altura do texto VOCÊ */
+    right: 8%; /* Ajuste para alinhar com o "VOCÊ" */
+    transform: translate(-50%, -50%); /* Centraliza a posição */
+    transform: rotate(30deg);
+    z-index: 0; /* Envia a imagem abaixo do texto se necessário */
+}
+
+main img[name="urso"]{
+    position: absolute;
+    width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+    top: 76%; /* Alinha com a altura do texto VOCÊ */
+    right: 1%; /* Ajuste para alinhar com o "VOCÊ" */
+    transform: translate(-50%, -50%); /* Centraliza a posição */
+    z-index: 0; /* Envia a imagem abaixo do texto se necessário */
+}
+
+main img[name="carta"]{
+    position: absolute;
+    width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
+    top: 73%; /* Alinha com a altura do texto VOCÊ */
+    left: 20%; /* Ajuste para alinhar com o "VOCÊ" */
+    transform: translate(-50%, -50%); /* Centraliza a posição */
+    z-index: 0; /* Envia a imagem abaixo do texto se necessário */
+}
+
+
+img[name="maosdadas"]{
+    position: absolute;
+    width: 110px; /* Ajuste o tamanho da imagem conforme necessário */
+    right: 9%; /* Ajuste para alinhar com o "VOCÊ" */
+    z-index: 0; /* Envia a imagem abaixo do texto se necessário */
+}
