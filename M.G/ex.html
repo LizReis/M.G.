@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Texto com Fundo de Imagens em Movimento</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .container h1 {
+      font-size: 3em;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .background-images {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .background-images img {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      opacity: 0.3;
+      transition: transform 10s linear;
+      animation: moveLeft 20s linear infinite;
+    }
+
+    /* Animação para mover da direita para a esquerda */
+    @keyframes moveLeft {
+      from {
+        transform: translateX(100vw);
+      }
+      to {
+        transform: translateX(-100vw);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Texto Central</h1>
+  </div>
+  <div class="background-images" id="background-images"></div>
+
+  <script>
+    // Lista de URLs das imagens (substitua pelas URLs reais das imagens)
+    const images = [
+      'maoDireita-M.png',
+      'maoEsquerda-P.png'
+    ];
+
+    const container = document.getElementById('background-images');
+
+    function createImage() {
+      const img = document.createElement('img');
+      img.src = images[Math.floor(Math.random() * images.length)];
+      img.style.top = Math.random() * 100 + 'vh';
+      img.style.left = '100vw'; // Começa do lado direito da tela
+
+      // Adiciona um tempo aleatório para cada imagem iniciar a animação
+      img.style.animationDelay = Math.random() * 5 + 's';
+      container.appendChild(img);
+
+      // Remove a imagem após o tempo da animação (para evitar acúmulo de imagens)
+      setTimeout(() => container.removeChild(img), 20000);
+    }
+
+    // Cria várias imagens iniciais e continua criando novas a cada intervalo
+    for (let i = 0; i < 10; i++) {
+      createImage();
+    }
+    setInterval(createImage, 3000); // A cada 3 segundos cria uma nova imagem
+  </script>
+</body>
+</html>
