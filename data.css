@@ -20,6 +20,10 @@ body {
     overflow: hidden;
 }
 
+#countdown {
+    font-size: 24px;
+}
+
 .centralizado {
     font-size: 100px;
     color: var(--pretoPrincipal);
