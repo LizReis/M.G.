@@ -18,10 +18,10 @@ function updateCountdown() {
     const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
     const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-
+    
     // Exibe a mensagem especial no dia 6 de dezembro
     if (now.getMonth() === 11 && now.getDate() === 6) {
-        document.querySelector(".centralizado").innerHTML = `<span style="color: white; font-size: 20px; font-weight: bold;">Feliz mais um ano de namoro, vida!</span>`;
+        document.querySelector(".centralizado").innerHTML = `<span style="color: white; font-size: 100px; font-weight: bold;">Feliz mais um ano <br> de namoro, vida!</span>`;
     } else {
         document.getElementById("days").innerText = days;
         document.getElementById("hours").innerText = hours;
