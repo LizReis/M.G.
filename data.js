@@ -61,7 +61,7 @@ function createHeart() {
 }
 
 function startHearts() {
-    setInterval(createHeart, 3000); // Cria um coração a cada 300ms
+    setInterval(createHeart, 2000); // Cria um coração a cada 300ms
 }
 
 // Atualize a função de contagem regressiva
